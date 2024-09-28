@@ -1,0 +1,580 @@
+/* General website background styles */
+html, body, #root {
+  height: 100%; /* Ensure these elements take up the full height of the viewport */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.Background {
+  background-color: #cfcbc9; /* Set your desired background color */
+  min-height: 100%; /* Ensure the background covers at least the height of the viewport */
+}
+
+/* Styles for the personal card component */
+.card {
+  border: 1px solid #7c837c; /* Adds a border around the card */
+  border-radius: 10px; /* Rounds the corners of the card */
+  box-shadow: 5px 5px 5px; /* Adds a shadow effect to the card */
+  padding: 20px; /* Adds padding inside the card */
+  margin: 10px; /* Adds margin outside the card */
+  text-align: center; /* Centers the text inside the card */
+  max-width: 250px; /* Sets a maximum width for the card */
+  display: inline-block; /* Displays the card as an inline-block element */
+  float: left; /* Floats the card to the left */
+  width: 50%; /* Sets width for the card */
+  box-sizing: border-box; /* Include padding and border in the width */
+  margin-right: 20px; /* Margin between card and link */
+}
+
+.card .card-image {
+  max-width: 90%; /* Sets the maximum width of the image to 60% of its container */
+  max-height: 60%; /* Sets the maximum height of the image to 60% of its container */
+  height: auto; /* Maintains the aspect ratio of the image */
+  width: auto; /* Maintains the aspect ratio of the image */
+  border-radius: 50%; /* Rounds the image to make it circular */
+  margin-bottom: 10px; /* Adds a margin below the image */
+  object-fit: cover; /* Ensures the image covers the entire area without distortion */
+  display: block; /* Ensures the image is treated as a block element */
+  margin-left: auto; /* Centers the image horizontally */
+  margin-right: auto; /* Centers the image horizontally */
+}
+
+
+.card .card-title {
+  font-family: Arial, sans-serif; /* Sets the font family, with a backup font in case the main font doesn't load */
+  margin: 0; /* Removes the default margin */
+  color: #7c837c; /* Sets the text color */
+}
+
+.card .card-text {
+  font-family: Arial, sans-serif; /* Sets the font family, with a backup font in case the main font doesn't load */
+  color: #7c837c; /* Sets the text color */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS for the home page */
+.home-container {
+  max-width: 800px; /* Sets maximum width for the home container */
+  margin: 0 auto; /* Center aligns the container */
+  overflow: hidden; /* Prevents content overflow */
+}
+
+/* CSS for the Recents page gallery */
+.gallery {
+  display: grid; /* Uses CSS Grid for layout */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Gap between gallery items */
+  padding: 20px; /* Padding inside the gallery container */
+  box-sizing: border-box; /* Includes padding and border in the box size */
+}
+
+.gallery-item {
+  display: flex; /* Uses Flexbox for layout */
+  flex-direction: column; /* Aligns items vertically */
+  align-items: center; /* Center align horizontally */
+  text-align: center; /* Center align text */
+  padding: 20px; /* Adds padding inside the gallery item */
+  box-sizing: border-box; /* Includes padding and border in the box size */
+  background-color: #f9f9f9; /* Sets background color */
+  border-radius: 8px; /* Adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a box shadow */
+}
+
+.gallery-image {
+  max-width: 100%; /* Ensures image does not exceed container width */
+  height: auto; /* Maintains aspect ratio of the image */
+  display: block; /* Displays the image as a block element */
+  margin-bottom: 10px; /* Adds margin below the image */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS for the Projects page modal */
+.Modal-overlay {
+  position: fixed; /* Fixes the position of the overlay */
+  top: 0; /* Positions at the top */
+  left: 0; /* Positions at the left */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  display: flex; /* Uses Flexbox for layout */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  z-index: 1000; /* Sets high z-index to overlay other elements */
+}
+
+.Modal-content {
+  background-color: white; /* White background for modal content */
+  padding: 20px; /* Padding inside the modal */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a box shadow */
+  position: relative; /* Positions relative to parent */
+  width: auto; /* Dynamic width */
+  max-width: 90%; /* Maximum width */
+  max-height: 90%; /* Maximum height */
+  overflow-y: auto; /* Enables vertical scrolling */
+}
+
+.Modal-close {
+  position: absolute; /* Positions absolutely within the modal */
+  top: 10px; /* Positions at the top */
+  right: 10px; /* Positions at the right */
+  font-size: 24px; /* Large font size */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.Slideshow {
+  display: flex; /* Uses Flexbox for layout */
+  flex-direction: column; /* Aligns items vertically */
+  align-items: center; /* Center aligns horizontally */
+  margin-top: 20px; /* Margin above the slideshow */
+}
+
+.Main-image {
+  position: relative; /* Relative position */
+}
+
+.Main-image img {
+  max-width: 50%; /* Maximum width */
+  height: auto; /* Maintains aspect ratio */
+  margin-bottom: 10px; /* Margin below the image */
+  position: relative; /* Relative position */
+  left: 20%; /* Shifts the image to the right */
+  transform: translateX(10%); /* Fine-tunes the horizontal shift */
+}
+
+.Thumbnail-container {
+  display: flex; /* Uses Flexbox for layout */
+  align-items: center; /* Center aligns vertically */
+  margin-top: 10px; /* Margin above the thumbnails */
+}
+
+.Thumbnail-container button {
+  background: none; /* No background */
+  border: none; /* No border */
+  font-size: 24px; /* Large font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin: 0 10px; /* Horizontal margin */
+}
+
+.Thumbnail {
+  max-width: 50px; /* Maximum width for thumbnails */
+  height: auto; /* Maintains aspect ratio */
+  margin: 0 5px; /* Horizontal margin */
+  cursor: pointer; /* Pointer cursor on hover */
+  opacity: 0.6; /* Reduced opacity */
+}
+
+.Thumbnail.active {
+  opacity: 1; /* Full opacity */
+  border: 2px solid #000; /* Black border */
+}
+
+/* CSS for the Projects grid */
+.Projects {
+  display: grid; /* Uses CSS Grid for layout */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Gap between project items */
+  padding: 20px; /* Padding inside the projects container */
+  box-sizing: border-box; /* Includes padding and border in the box size */
+}
+
+.Projects-item {
+  display: flex; /* Uses Flexbox for layout */
+  flex-direction: column; /* Aligns items vertically */
+  align-items: center; /* Center aligns horizontally */
+  text-align: center; /* Center aligns text */
+  padding: 20px; /* Padding inside the project item */
+  box-sizing: border-box; /* Includes padding and border in the box size */
+  background-color: #f9f9f9; /* Background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: transform 0.3s; /* Smooth transform transition */
+}
+
+.Projects-item:hover {
+  transform: scale(1.05); /* Scales up slightly on hover */
+}
+
+.Projects-image {
+  max-width: 100%; /* Maximum width */
+  height: auto; /* Maintains aspect ratio */
+  margin-bottom: 10px; /* Margin below the image */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS for About me page */
+html, body, #root {
+  height: 100%; /* Ensure these elements take up the full height of the viewport */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+.Background {
+  background-color: #cfcbc9; /* Set your desired background color */
+  min-height: 100%; /* Ensure the background covers at least the height of the viewport */
+}
+/* CSS for the About Me page container */
+.about-container {
+  display: flex; /* Uses Flexbox for layout */
+  flex-direction: column; /* Aligns items vertically */
+  align-items: flex-start; /* Aligns items to the left */
+  height: 100vh; /* Full viewport height */
+  max-width: 600px; /* Maximum width for the container */
+  margin: 20px auto; /* Centers the container horizontally and adds vertical margin */
+  box-sizing: border-box; /* Includes padding and border in the box size */
+}
+
+/* CSS for the header bubble */
+.header-bubble {
+  background-color: #fff; /* White background */
+  border: 2px solid #c1b5c6; /* Border color matching the background */
+  border-radius: 15px 15px 0 0; /* Rounded corners at the top */
+  padding: 10px 20px; /* Padding inside the bubble */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 100%; /* Full width of the container */
+  box-sizing: border-box; /* Includes padding and border in the box size */
+}
+
+/* CSS for the text bubble */
+.text-bubble {
+  background-color: #fff; /* White background */
+  border: 2px solid #c1b5c6; /* Border color matching the background */
+  border-radius: 0 0 15px 15px; /* Rounded corners at the bottom */
+  padding: 20px; /* Padding inside the bubble */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 100%; /* Full width of the container */
+  flex-grow: 1; /* Allows this element to grow and fill available space */
+  box-sizing: border-box; /* Includes padding and border in the box size */
+  overflow-y: auto; /* Enables vertical scrolling if content overflows */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS for the NavBar container */
+.nav {
+  background-color: #c1b5c6; /* Background color of the NavBar */
+  color: white; /* Text color */
+  display: flex; /* Uses Flexbox for layout */
+  justify-content: space-between; /* Spreads out items evenly */
+  align-items: center; /* Aligns items vertically in the center */
+  padding: 0 1rem; /* Padding on left and right */
+}
+
+/* CSS for the site title */
+.site-title {
+  font-size: 2rem; /* Font size for the site title */
+}
+
+/* CSS for the NavBar list */
+.nav ul {
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+  list-style: none; /* Removes list bullets */
+  display: flex; /* Uses Flexbox for layout */
+  gap: 1rem; /* Space between list items */
+}
+
+/* CSS for the NavBar links */
+.nav a {
+  color: inherit; /* Inherits text color */
+  text-decoration: none; /* Removes underline from links */
+  height: 83%; /* Sets the height of the link */
+  display: flex; /* Uses Flexbox for layout */
+  align-items: center; /* Aligns items vertically in the center */
+  padding: 0.25rem; /* Padding inside the link */
+}
+
+/* CSS for link hover state */
+.nav a:hover {
+  background-color: #a5d6a7; /* Background color on hover */
+}
+
+/* CSS for link active state */
+.nav a:active {
+  background-color: #f8bbd0; /* Background color when active */
+}
+
+/* CSS for the logo container */
+.logo-container {
+  position: relative; /* Positions the container relative to its normal position */
+  display: flex; /* Uses Flexbox for layout */
+  align-items: center; /* Aligns items vertically in the center */
+}
+
+/* CSS for the logo */
+.logo {
+  cursor: pointer; /* Changes cursor to pointer when hovered */
+  height: 40px; /* Height of the logo */
+  width: auto; /* Maintains aspect ratio */
+  margin-right: 1rem; /* Margin on the right side */
+}
+
+/* CSS for the expanded links container */
+.expanded-links {
+  position: fixed; /* Fixes position relative to the viewport */
+  top: 50%; /* Centers vertically */
+  left: 50%; /* Centers horizontally */
+  transform: translate(-50%, -50%); /* Translates to exact center */
+  background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
+  padding: 20px; /* Padding inside the container */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+  text-align: center; /* Centers text */
+  opacity: 0; /* Initially invisible */
+  visibility: hidden; /* Initially not visible */
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* Transition effects */
+  z-index: 1000; /* Stacks above other elements */
+}
+
+/* CSS for the active state of expanded links */
+.expanded-links.active {
+  opacity: 1; /* Fully visible */
+  visibility: visible; /* Visible */
+  transition: opacity 0.3s ease, visibility 0s linear 0s; /* Transition effects */
+}
+
+/* CSS for the social icons container */
+.social-icons {
+  display: flex; /* Aligns social icons in a row */
+  gap: 0.5rem; /* Space between social icons */
+}
+
+/* CSS for social icons */
+.social-icon {
+  max-width: 30px; /* Maximum width of the icon */
+  height: auto; /* Maintains aspect ratio */
+  margin: 0; /* Reset margin to zero */
+}
+
+/* CSS for the fade overlay */
+.fade-overlay {
+  position: fixed; /* Cover the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  opacity: 0; /* Initially invisible */
+  visibility: hidden; /* Initially not visible */
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* Transition effects */
+  z-index: 999; /* Ensure it's below the expanded links */
+}
+
+/* CSS for the active state of the fade overlay */
+.fade-overlay.active {
+  opacity: 1; /* Fully visible */
+  visibility: visible; /* Visible */
+  transition: opacity 0.3s ease, visibility 0s linear 0s; /* Transition effects */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS for the background overlay */
+.overlay {
+  position: fixed; /* Fixed position to cover the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  opacity: 0; /* Initially invisible */
+  visibility: hidden; /* Initially hidden */
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* Transition effects */
+  z-index: 999; /* Positioned below the contact form */
+}
+
+/* CSS for the active state of the overlay */
+.overlay.active {
+  opacity: 1; /* Fully visible */
+  visibility: visible; /* Visible */
+  transition: opacity 0.3s ease, visibility 0s linear 0s; /* Transition effects */
+}
+
+/* CSS for the contact form container */
+.contact-form {
+  position: fixed; /* Keeps form fixed relative to the viewport */
+  top: 50%; /* Centers the form vertically */
+  left: 50%; /* Centers the form horizontally */
+  transform: translate(-50%, -50%); /* Adjusts position to exact center */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+  z-index: 1000; /* Ensures the form appears above other elements */
+  opacity: 0; /* Initially invisible */
+  pointer-events: none; /* Prevents interaction when invisible */
+  overflow: hidden; /* Prevents content from overflowing */
+}
+
+/* CSS for the visible state of the contact form */
+.contact-form.visible {
+  opacity: 1; /* Fully visible */
+  pointer-events: auto; /* Allows interaction */
+}
+
+/* CSS for the contact form content */
+.contact-form-content {
+  background-color: white; /* White background for the form */
+  padding: 20px; /* Padding inside the form */
+  width: auto; /* Allows width to adjust dynamically */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+  border-radius: 8px; /* Rounded corners */
+  position: relative; /* Relative positioning for internal elements */
+  animation: slideIn 0.5s ease forwards; /* Slide-in animation */
+  transform: translateX(0); /* Resets transform for animation */
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%); /* Starts above the viewport */
+  }
+  100% {
+    transform: translateY(0); /* Ends at the original position */
+  }
+}
+
+/* CSS for the close button */
+.close-btn {
+  position: absolute; /* Positions the button absolutely inside the form */
+  top: 10px; /* Distance from the top */
+  right: 10px; /* Distance from the right */
+  font-size: 24px; /* Font size of the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  color: black; /* Initial color */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* CSS for the close button hover state */
+.close-btn:hover {
+  color: red; /* Color changes to red on hover */
+}
+
+/* CSS for the form header */
+h2 {
+  text-align: center; /* Centers the text */
+  margin-bottom: 20px; /* Margin below the header */
+}
+
+/* CSS for form groups */
+.form-group {
+  margin-bottom: 15px; /* Margin below each form group */
+}
+
+/* CSS for form labels */
+label {
+  font-weight: bold; /* Bold text */
+}
+
+/* CSS for text input fields and textarea */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%; /* Full width of the container */
+  padding: 8px; /* Padding inside the input */
+  font-size: 16px; /* Font size of the input text */
+  border: 1px solid #ccc; /* Border around the input */
+  border-radius: 4px; /* Rounded corners */
+}
+
+/* CSS for the submit button */
+.submit-btn {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding inside the button */
+  border: none; /* Removes border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* CSS for the submit button hover state */
+.submit-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+
+
